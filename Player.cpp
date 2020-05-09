@@ -16,3 +16,24 @@ std::string Player::getName()
 {
 	return name;
 }
+
+void Player::CreateCharacter(Character& c, std::string cnm)
+{
+	c.setCharacterName(cnm);
+	listOfCharacters.Append(c);
+}
+
+void Player::SelectCharacter(std::string cnm)
+{
+	selectedCharacter = listOfCharacters.Select(cnm);
+}
+
+Character* Player::CurrentCharacter()
+{
+	return selectedCharacter;
+}
+
+void Player::RetrieveCharacters()
+{
+	listOfCharacters.TraverseList();
+}
