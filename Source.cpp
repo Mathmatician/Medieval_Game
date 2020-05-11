@@ -94,22 +94,7 @@ int main()
 			us_in = "";
 	}
 
-
-	/*------------------------------------------
-	| Player selects WARRIOR class and attacks |
-	------------------------------------------*/
-	//cout << endl;
-	//p.SelectCharacter("Tim");
-	//p.CurrentCharacter()->Attack();
-
-
-	/*---------------------------------------
-	| Player selects MONK class and attacks |
-	---------------------------------------*/
-	cout << endl;
-	//p.SelectCharacter("Ang");
-	//p.CurrentCharacter()->Attack();
-
+	
 
 	system("pause"); // stops program
 	return 0;
