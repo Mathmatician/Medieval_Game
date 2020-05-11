@@ -3,7 +3,8 @@
 
 Monk::Monk()
 {
-	std::cout << "Monk class created" << std::endl;
+	Hp = 200;
+	attackPower = 40;
 }
 
 void Monk::Attack()

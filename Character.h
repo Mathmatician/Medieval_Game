@@ -1,8 +1,10 @@
 #include <string>
 
 class Character {
-private:
+protected:
 	std::string characterName;
+	int Hp = 0;
+	int attackPower = 0;
 public:
 	Character* head;
 	Character* next;

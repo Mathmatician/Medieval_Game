@@ -12,6 +12,7 @@ public:
 	Player();
 	void setName(std::string);
 	void CreateCharacter(Character&, std::string);
+	void SelectCharacter(int);
 	void SelectCharacter(std::string);
 	void RetrieveCharacters();
 	Character* CurrentCharacter();

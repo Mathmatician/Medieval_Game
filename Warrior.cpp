@@ -3,7 +3,8 @@
 
 Warrior::Warrior()
 {
-	std::cout << "Warrior class created" << std::endl;
+	Hp = 500;
+	attackPower = 10;
 }
 
 void Warrior::Attack()

@@ -9,6 +9,7 @@ private:
 public:
 	CharacterList();
 	void Append(Character&);
+	Character* Select(int);
 	Character* Select(std::string);
 	void TraverseList();
 };

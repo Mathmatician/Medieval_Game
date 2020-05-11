@@ -21,7 +21,25 @@ void CharacterList::Append(Character& c)
 		end = &c;
 	}
 
-	//listSize += 1;
+	listSize += 1;
+}
+
+Character* CharacterList::Select(int n)
+{
+	if (head != nullptr)
+	{
+		int count = 1;
+		Character* tmp = head;
+		while (count < n)
+		{
+			tmp = tmp->next;
+			count++;
+		}
+
+		return tmp;
+	}
+
+	return nullptr;
 }
 
 Character* CharacterList::Select(std::string cnm)
@@ -30,24 +48,29 @@ Character* CharacterList::Select(std::string cnm)
 	{
 		Character* tmp = head;
 		while (tmp->getCharacterName() != cnm)
-		{
 			tmp = tmp->next;
-		}
 
 		return tmp;
 	}
 
-	return head;
+	return nullptr;
 }
 
 
 void CharacterList::TraverseList()
 {
-	Character* tmp = head;
-	while (tmp != end)
+	if (head != nullptr)
 	{
-		std::cout << tmp->getCharacterName() << std::endl;
-		tmp = tmp->next;
+		Character* tmp = head;
+		int count = 1;
+		while (tmp != end)
+		{
+			std::cout << " " + std::to_string(count) + ".) " + tmp->getCharacterName() << std::endl;
+			tmp = tmp->next;
+			count++;
+		}
+		std::cout << " " + std::to_string(count) + ".) " + tmp->getCharacterName() << std::endl;
 	}
-	std::cout << tmp->getCharacterName() << std::endl;
+	else
+		std::cout << "  * You have no characters" << std::endl;
 }
